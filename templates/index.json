@@ -1,0 +1,519 @@
+{
+  "sections": {
+    "c9703cb9-0c50-4504-a966-c25fa23dfcae": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "c2a45c56-d3fc-440a-8927-817fe162dea6": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>THE MISSION<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "a5a7cc14-f655-427d-94f6-9ff8f8e5779d": {
+          "type": "text",
+          "settings": {
+            "text": "<h5><strong>End the battle against acne<\/strong><\/h5>"
+          }
+        },
+        "b6a309f7-4260-4155-aa42-e77696e4e48d": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Created by an expert team of scientists & dermatologists and armed with supercharged patented ingredients & technology - the ultimate Acne Care Squad is finally here!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "c2a45c56-d3fc-440a-8927-817fe162dea6",
+        "a5a7cc14-f655-427d-94f6-9ff8f8e5779d",
+        "b6a309f7-4260-4155-aa42-e77696e4e48d"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-c580fe93-0fa0-4528-a7f6-92dcf7676ce0",
+        "full_width": true,
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "ed6174aa-54ac-4e98-bfd7-7a2465c0d040": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "enable_video_looping": true,
+        "video": "shopify:\/\/files\/videos\/c66837c257014545881d4ff8ca19329f.mp4",
+        "video_url": "",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "3686c3d0-4f49-45dd-b9a5-dee955b48d06": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "63c7fe7d-6f9b-4063-b2e9-107ea8671d86": {
+          "type": "heading",
+          "settings": {
+            "heading": "SHOP OUR PRODUCTS",
+            "heading_size": "h1"
+          }
+        },
+        "98987074-a55f-4514-8f53-8c88d4d834ed": {
+          "type": "button",
+          "settings": {
+            "button_label": "BESTSELLERS",
+            "button_link": "shopify:\/\/collections\/bestsellers",
+            "button_style_secondary": true,
+            "button_label_2": "REGIME KITS",
+            "button_link_2": "shopify:\/\/collections\/regime-kits",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "63c7fe7d-6f9b-4063-b2e9-107ea8671d86",
+        "98987074-a55f-4514-8f53-8c88d4d834ed"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-c580fe93-0fa0-4528-a7f6-92dcf7676ce0",
+        "full_width": true,
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "5f01afe6-8b68-401e-963b-135b418a6e0e": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "template--19767883071763__5f01afe6-8b68-401e-963b-135b418a6e0e-1689322509d3860c08-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>OUR FOUNDING PRINCIPLES<\/strong>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--19767883071763__5f01afe6-8b68-401e-963b-135b418a6e0e-1689322509d3860c08-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-c580fe93-0fa0-4528-a7f6-92dcf7676ce0",
+        "full_width": true,
+        "padding_top": 16,
+        "padding_bottom": 4
+      }
+    },
+    "f61eb249-6a15-4302-bf09-2d5422d5f5e7": {
+      "type": "custom-review-section",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "5ebe8121-a0e4-4e4e-8124-ae3953c6f4fb": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "template--19767883071763__5ebe8121-a0e4-4e4e-8124-ae3953c6f4fb-16895731880b61e82e-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "FAQS",
+            "heading_size": "h1"
+          }
+        },
+        "template--19767883071763__5ebe8121-a0e4-4e4e-8124-ae3953c6f4fb-16895731880b61e82e-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Got questions? Let's clear up your doubts; here are the most frequently asked questions to solve your queries.<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--19767883071763__5ebe8121-a0e4-4e4e-8124-ae3953c6f4fb-16895731880b61e82e-0",
+        "template--19767883071763__5ebe8121-a0e4-4e4e-8124-ae3953c6f4fb-16895731880b61e82e-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 8,
+        "padding_bottom": 0
+      }
+    },
+    "078fe2b7-0c6e-44a5-8929-5733cd8aca78": {
+      "type": "collapsible-content",
+      "disabled": true,
+      "blocks": {
+        "template--19767883071763__078fe2b7-0c6e-44a5-8929-5733cd8aca78-168924499674e3248d-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Q. How long will it take to see results?",
+            "icon": "none",
+            "row_content": "<p>The outcome is entirely dependent on the stage of your acne and the skin type you possess. Take our quiz to evaluate your acne stage & the best regime to win the battle against it, <a href=\"https:\/\/www.acnesquad.com\/pages\/quiz-intro\">Click Here<\/a><\/p>",
+            "page": ""
+          }
+        },
+        "template--19767883071763__078fe2b7-0c6e-44a5-8929-5733cd8aca78-168924499674e3248d-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Q. When should I use these products?",
+            "icon": "none",
+            "row_content": "<p>If you have acne-prone skin, generally sensitive skin or any other skin type that aspires to have clear and healthy skin, Acne Squad range is perfect for you. We recommend you take our quiz to understand your skin and its needs better. <a href=\"https:\/\/www.acnesquad.com\/pages\/quiz-intro\">Click Here<\/a><\/p>",
+            "page": ""
+          }
+        },
+        "template--19767883071763__078fe2b7-0c6e-44a5-8929-5733cd8aca78-168924499674e3248d-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Q. Will this suit my sensitive skin?",
+            "icon": "none",
+            "row_content": "<p>Yes, our products have been co-created with dermatologists and are non-comedogenic (don't block\/clog pores). They will be kind to your skin but not to your acne.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19767883071763__078fe2b7-0c6e-44a5-8929-5733cd8aca78-168924499674e3248d-0",
+        "template--19767883071763__078fe2b7-0c6e-44a5-8929-5733cd8aca78-168924499674e3248d-1",
+        "template--19767883071763__078fe2b7-0c6e-44a5-8929-5733cd8aca78-168924499674e3248d-2"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "section",
+        "color_scheme": "background-1",
+        "container_color_scheme": "scheme-d3a8596a-eed6-44e8-8312-4be7a65c32ac",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "9964e2ce-d2ee-4976-a8bc-6dec4f2433a2": {
+      "type": "custom-image-with-text",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/tree.webp",
+        "text": "Save Tree Save Nature",
+        "enabletext": true,
+        "text_alignment": "center"
+      }
+    },
+    "7d6c1b6c-1185-484a-9a73-03b6fadb2996": {
+      "type": "custom-section",
+      "disabled": true,
+      "blocks": {
+        "template--20021432484115__7d6c1b6c-1185-484a-9a73-03b6fadb2996-slide-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/flatlay-of-jade-face-roller-laying-on-a-grey-stone.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--20021432484115__7d6c1b6c-1185-484a-9a73-03b6fadb2996-slide-1"
+      ],
+      "settings": {
+        "menu": "",
+        "page": "",
+        "product": "",
+        "product_list": [
+
+        ],
+        "html_file": "<div>Hello World<\/div>\n<iframe src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1f558d3a52024cdc9305ccfd8573ec06.mp4\" frameborder=\"0\" autoplay=\"\" height=\"560\" width=\"315\"><\/iframe>",
+        "paragraph": "<p>Hello <\/p>",
+        "button_link": "",
+        "product_description_video": "",
+        "enable_payment_button": true,
+        "google": true,
+        "inline": "my <em>inline<\/em> <strong>text.<\/strong>",
+        "heading_font": "abril_fatface_n4",
+        "collection": "bestsellers",
+        "collection_list": [
+          "bestsellers",
+          "combos",
+          "face",
+          "regime-kits",
+          "all-collections"
+        ],
+        "article": "news\/first-blog",
+        "blog": "news",
+        "title": "My Custom Section Here",
+        "title_aligment": "center",
+        "title_text_color": "#57f714",
+        "title_bg_color": "#ffffff",
+        "background": "linear-gradient(125deg, rgba(236, 89, 16, 1), rgba(228, 9, 9, 0.38) 23%, rgba(131, 160, 133, 1) 56%, rgba(228, 55, 20, 0.38) 84%, rgba(219, 110, 243, 1) 100%)",
+        "color_scheme": "background-2",
+        "font_size": 15,
+        "show_image": true,
+        "products_per_page": 2,
+        "select_image": "shopify:\/\/shop_images\/flatlay-of-jade-face-roller-laying-on-a-grey-stone.jpg",
+        "image_with_text_alignment": "right",
+        "vertical_alignment": "middle"
+      }
+    },
+    "f5dd5dca-3b96-437c-95c7-78be901db523": {
+      "type": "custom-slider",
+      "disabled": true,
+      "settings": {
+        "img": "shopify:\/\/shop_images\/SI1_720x_52c68180-6c99-470d-9542-0343dcecf31b.png",
+        "text": "Acnesquad",
+        "text_alignment": "center",
+        "text_color": "#707070"
+      }
+    },
+    "0e0fc9a2-7e88-4d58-9d47-95a31c70ecee": {
+      "type": "custom-hero-section",
+      "blocks": {
+        "8f228603-817f-4c0a-90d0-6876f52998a6": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/b1.webp"
+          }
+        },
+        "94cde7bb-0066-4a60-a02c-b9c43f4f1fc4": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/b2.webp"
+          }
+        },
+        "07a73264-41eb-4c3a-8595-6dc2e4ecc479": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/b4.webp"
+          }
+        },
+        "088f7137-ee99-4170-af7d-8882b587e036": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/b5.webp"
+          }
+        },
+        "934c9948-516a-472b-9419-bac76b681be3": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Homepage_banner2.webp"
+          }
+        }
+      },
+      "block_order": [
+        "8f228603-817f-4c0a-90d0-6876f52998a6",
+        "94cde7bb-0066-4a60-a02c-b9c43f4f1fc4",
+        "07a73264-41eb-4c3a-8595-6dc2e4ecc479",
+        "088f7137-ee99-4170-af7d-8882b587e036",
+        "934c9948-516a-472b-9419-bac76b681be3"
+      ],
+      "settings": {
+      }
+    },
+    "d0142b01-143b-457f-9f76-8bbac9106043": {
+      "type": "custom-home-slide",
+      "blocks": {
+        "3110b21e-afe4-44d6-8664-1459f514ec8e": {
+          "type": "slide-image",
+          "settings": {
+            "images": "shopify:\/\/shop_images\/slide1.webp"
+          }
+        },
+        "581c2236-548e-4fb4-b86e-117900820b1d": {
+          "type": "slide-image",
+          "settings": {
+            "images": "shopify:\/\/shop_images\/slide2_3fcbefe8-a7a1-42b5-9296-a56228f1fb84.webp"
+          }
+        },
+        "5f1573e4-7284-4e64-8a9f-43ab1c83db9b": {
+          "type": "slide-image",
+          "settings": {
+            "images": "shopify:\/\/shop_images\/slide3_471b37d3-e60e-433f-b0ac-7a9e6c783fdb.webp"
+          }
+        },
+        "32a32142-370e-4606-b97b-749f39486471": {
+          "type": "slide-image",
+          "settings": {
+            "images": "shopify:\/\/shop_images\/slide4_52b10011-e76a-4dd3-8ee6-0d8704ae2b3b.webp"
+          }
+        }
+      },
+      "block_order": [
+        "3110b21e-afe4-44d6-8664-1459f514ec8e",
+        "581c2236-548e-4fb4-b86e-117900820b1d",
+        "5f1573e4-7284-4e64-8a9f-43ab1c83db9b",
+        "32a32142-370e-4606-b97b-749f39486471"
+      ],
+      "settings": {
+        "title": "The Breakdown Breakout",
+        "title_aligment": "center",
+        "title_text_color": "#a99ef6",
+        "title_bg_color": "linear-gradient(180deg, rgba(247, 116, 116, 1), rgba(247, 143, 122, 1) 11.631%, rgba(0, 0, 0, 1) 100%)",
+        "font_size": 17,
+        "paragraph": "<p>Acne is complex, which is why our team of experts have broken down the acne lifecycle into 4 key, but simple stages<\/p>",
+        "paragraph_aligment": "center",
+        "paragraph_text_color": "#707070",
+        "para_bg_color": "linear-gradient(180deg, rgba(247, 152, 152, 1), rgba(0, 0, 0, 1) 100%)",
+        "para_font_size": 18
+      }
+    },
+    "1ef81c67-678c-46fe-8dd7-1f8437067940": {
+      "type": "custom-product",
+      "blocks": {
+        "bc59de08-9b54-45c9-b2a7-6f36e17d2fe7": {
+          "type": "product",
+          "settings": {
+            "product": "10-niacinamide-serum-peeling-tonic-solution"
+          }
+        },
+        "157401dd-fcc0-47d9-856d-2362c573ecf0": {
+          "type": "product",
+          "settings": {
+            "product": "acne-scars-dark-spots-peeling-tonic-solution"
+          }
+        },
+        "a1459209-7d1f-4434-a6b0-b6dc52dd59ae": {
+          "type": "product",
+          "settings": {
+            "product": "daily-3-step-routine-for-acne-prone-skin"
+          }
+        },
+        "2b3cd8e6-7e1b-4b1c-8057-986659c2c1a2": {
+          "type": "product",
+          "settings": {
+            "product": "daily-routine-for-oily-and-acne-prone-skin"
+          }
+        },
+        "2c53af42-56f4-4ec7-bbc3-8a55139bc563": {
+          "type": "product",
+          "settings": {
+            "product": "face-wash-with-salicylic-acid-thymol-t-essence"
+          }
+        },
+        "ce3e25d7-45c4-4018-8758-9d4d94884405": {
+          "type": "product",
+          "settings": {
+            "product": "spot-corrector-for-acne-scars-with-triple-concentrate-formula"
+          }
+        },
+        "d7883def-7618-474b-aa64-adc77d550b8c": {
+          "type": "product",
+          "settings": {
+            "product": "acne-scars-dark-spots-serum-spot-corrector-duo"
+          }
+        }
+      },
+      "block_order": [
+        "bc59de08-9b54-45c9-b2a7-6f36e17d2fe7",
+        "157401dd-fcc0-47d9-856d-2362c573ecf0",
+        "a1459209-7d1f-4434-a6b0-b6dc52dd59ae",
+        "2b3cd8e6-7e1b-4b1c-8057-986659c2c1a2",
+        "2c53af42-56f4-4ec7-bbc3-8a55139bc563",
+        "ce3e25d7-45c4-4018-8758-9d4d94884405",
+        "d7883def-7618-474b-aa64-adc77d550b8c"
+      ],
+      "settings": {
+        "title": "My Products"
+      }
+    },
+    "9bca16ae-a4af-4a0e-a646-a3a1f9264590": {
+      "type": "custom-featured-collection",
+      "settings": {
+        "title": "SHOP OUR PRODUCTS",
+        "collection1": "bestsellers",
+        "collection2": "regime-kits"
+      }
+    },
+    "61587f67-5cad-4ebb-8b5a-193b3f9c2c8f": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "mens-shoes",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "2d0006ad-f115-4983-a6ec-a2ae93c025d9": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all-collections",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "75bd5c26-8fe1-4154-9b60-28839b7d5619": {
+      "type": "faq",
+      "settings": {
+        "heading": "FAQ"
+      }
+    }
+  },
+  "order": [
+    "c9703cb9-0c50-4504-a966-c25fa23dfcae",
+    "ed6174aa-54ac-4e98-bfd7-7a2465c0d040",
+    "3686c3d0-4f49-45dd-b9a5-dee955b48d06",
+    "5f01afe6-8b68-401e-963b-135b418a6e0e",
+    "f61eb249-6a15-4302-bf09-2d5422d5f5e7",
+    "5ebe8121-a0e4-4e4e-8124-ae3953c6f4fb",
+    "078fe2b7-0c6e-44a5-8929-5733cd8aca78",
+    "9964e2ce-d2ee-4976-a8bc-6dec4f2433a2",
+    "7d6c1b6c-1185-484a-9a73-03b6fadb2996",
+    "f5dd5dca-3b96-437c-95c7-78be901db523",
+    "0e0fc9a2-7e88-4d58-9d47-95a31c70ecee",
+    "d0142b01-143b-457f-9f76-8bbac9106043",
+    "1ef81c67-678c-46fe-8dd7-1f8437067940",
+    "9bca16ae-a4af-4a0e-a646-a3a1f9264590",
+    "61587f67-5cad-4ebb-8b5a-193b3f9c2c8f",
+    "2d0006ad-f115-4983-a6ec-a2ae93c025d9",
+    "75bd5c26-8fe1-4154-9b60-28839b7d5619"
+  ]
+}

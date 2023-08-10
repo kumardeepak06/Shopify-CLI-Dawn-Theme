@@ -1,0 +1,88 @@
+<div class="main-container">
+  <div class="container">
+    <div class="image">
+      <img
+        src="{{ section.settings.img | img_url:'400x' }}"
+        loading="lazy"
+        width="360px"
+        height="400px"
+        alt="Loading Image"
+      >
+    </div>
+    <div class="text">
+      <h4>{{ section.settings.text }}</h4>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Slider",
+  "settings": [
+    {
+      "type":"image_picker",
+      "id":"img",
+      "label":"Select Image"
+    },
+    {
+      "type":"text",
+      "id":"text",
+      "label":"Enter Text"
+    },
+   {
+      "type":"select",
+      "id":"text_alignment",
+      "label":"Text Alignment",
+      "options":[
+        {
+          "value":"left",
+          "label":"Left"
+        },
+        {
+          "value":"center",
+          "label":"Center"
+        },
+        {
+          "value":"right",
+          "label":"Right"
+        }
+      ],
+      "default":"left"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color"
+    }
+  ],
+  "presets":[
+    {
+      "name":"Custom Slider"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .main-container {
+      display: flex;
+  }
+
+  .container {
+      position: relative;
+  }
+
+  .text {
+      position: absolute;
+      min-width: 100%;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+  }
+
+  .text h4 {
+    text-align: {{ section.settings.text_alignment }};
+    color: {{section.settings.text_color}};
+    font-size: xxx-large;
+  }
+</style>

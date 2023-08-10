@@ -1,0 +1,76 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "disabled": true,
+      "blocks": {
+        "988828ac-4aa5-4b78-9b09-e4433280a6ab": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store1",
+            "link": ""
+          }
+        },
+        "36fabe4a-dcc3-4e7b-9482-1c7632069808": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store2",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "988828ac-4aa5-4b78-9b09-e4433280a6ab",
+        "36fabe4a-dcc3-4e7b-9482-1c7632069808"
+      ],
+      "settings": {
+        "color_scheme": "accent-2",
+        "show_line_separator": true,
+        "auto_rotate": true,
+        "change_slides_speed": 5
+      }
+    },
+    "7896e660-6941-4f5f-870f-5235f1c4c9a3": {
+      "type": "custom-announcement",
+      "disabled": true,
+      "settings": {
+        "announce1": "Hello",
+        "announce2": "Welcome",
+        "text_position": "center"
+      }
+    },
+    "header": {
+      "type": "header",
+      "disabled": true,
+      "settings": {
+        "logo_position": "middle-left",
+        "menu": "main-menu",
+        "menu_type_desktop": "mega",
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": false,
+        "color_scheme": "background-1",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "mobile_logo_position": "center",
+        "margin_bottom": 60,
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "63063ea7-558d-495d-bf98-26b5dc52842f": {
+      "type": "header-custom",
+      "settings": {
+        "logo_image": "shopify:\/\/shop_images\/New_Project_29_300x_208b5ca3-e757-4b6f-addd-58478ba78a06.jpg",
+        "header_position": "on-scroll-up"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "7896e660-6941-4f5f-870f-5235f1c4c9a3",
+    "header",
+    "63063ea7-558d-495d-bf98-26b5dc52842f"
+  ]
+}

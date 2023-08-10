@@ -1,0 +1,238 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+
+<div class="main-container">
+  <div class="heading-title">
+    <h2 style="font-size: {{section.settings.font_size}}; background-color: {{section.settings.title_bg_color}}">
+      {{ section.settings.title }}
+    </h2>
+  </div>
+  <div
+    class="text-content"
+    style="font-size: {{section.settings.para_font_size}}; background-color: {{section.settings.para_bg_color}}"
+  >
+    {{ section.settings.paragraph }}
+  </div>
+
+  <div class="img-slide">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'slide-image' %}
+          <div class="slide-image" {{ block.shopify_attributes }}>
+            {{ block.settings.images | image_url: width: 340 | image_tag }}
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+  <div class="slide-dots"></div>
+</div>
+
+{% schema %}
+{
+  "name": " Custom Homeslide Section",
+  "settings": [
+     {
+      "type": "text",
+      "id": "title",
+      "label": "Enter Title Here"
+    },
+      {
+  "type": "radio",
+  "id": "title_aligment",
+  "label": "Title alignment",
+  "options": [
+    {
+      "value": "left",
+      "label": "Left"
+    },
+    {
+      "value": "right",
+      "label": "Right"
+    },
+    {
+      "value": "center",
+      "label": "Center"
+    }
+  ],
+  "default": "left"
+},
+    {
+  "type": "color",
+  "id": "title_text_color",
+  "label": "Text Color",
+  "default": "#000000"
+},
+    {
+  "type": "color_background",
+  "id": "title_bg_color",
+  "label": "Background",
+  "default": "linear-gradient(#ffffff, #000000)"
+},
+     {
+  "type": "range",
+  "id": "font_size",
+  "min": 12,
+  "max": 24,
+  "step": 1,
+  "unit": "px",
+  "label": "Font size",
+  "default": 16
+},
+      {
+  "type": "richtext",
+  "id": "paragraph",
+  "label": "Paragraph"
+},
+      {
+  "type": "radio",
+  "id": "paragraph_aligment",
+  "label": "Paragraph alignment",
+  "options": [
+    {
+      "value": "left",
+      "label": "Left"
+    },
+    {
+      "value": "right",
+      "label": "Right"
+    },
+    {
+      "value": "center",
+      "label": "Center"
+    }
+  ],
+  "default": "left"
+},
+    {
+  "type": "color",
+  "id": "paragraph_text_color",
+  "label": "Paragraph Text Color",
+  "default": "#000000"
+},
+    {
+  "type": "color_background",
+  "id": "para_bg_color",
+  "label": "Paragraph Background",
+  "default": "linear-gradient(#ffffff, #000000)"
+},
+     {
+  "type": "range",
+  "id": "para_font_size",
+  "min": 12,
+  "max": 24,
+  "step": 1,
+  "unit": "px",
+  "label": "Paragraph Font size",
+  "default": 16
+}
+  ],
+  "max_blocks": 5,
+  	"blocks": [
+     {
+       "name": "Slide",
+       "type": "slide-image",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "images",
+           "label": "Image"
+         }
+       ]
+     }
+   ],
+  "presets": [
+    {
+      "name": " Custom Homeslide Section"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .heading-title h2 {
+  color: {{section.settings.title_text_color}};
+  font-family: "Roboto";
+  font-weight: 400;
+  text-align: {{section.settings.title_aligment}};
+  line-height: 42px;
+  margin: 16px 0px;
+  }
+
+  .text-content{
+    color: {{section.settings.paragraph_text_color}};
+    line-height: 18px;
+    text-align: {{section.settings.paragraph_aligment}};
+    align-items: center;
+    font-family: Europa_Regular;
+    margin-bottom: 16px;
+  }
+
+  .img-slide {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+
+  }
+  .img-slide .slide-image{
+    margin-right: 16px;
+    margin-bottom: 16px;
+  }
+
+  @media only screen and (max-width: 769px) {
+    .img-slide{
+       justify-content: center;
+    }
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+    }
+    .slick-dots li {
+      margin: 0.2rem;
+      border: 1px solid #ac9efd;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .slick-dots li button {
+      display: none;
+    }
+    .slick-dots li.slick-active {
+      background: #ac9efd;
+    }
+  }
+</style>
+
+<script>
+   $(document).ready(function () {
+  $(".img-slide").slick({
+     slidesToShow: 4,
+     infinite: false,
+    autoplay: false,
+     responsive: [
+       {
+         breakpoint: 769,
+         settings: {
+           dots: true,
+           arrows: false,
+           slidesToShow: 3,
+           slidesToScroll: 1,
+         },
+       },
+       {
+         breakpoint: 480,
+         settings: {
+           dots: true,
+           arrows: false,
+           slidesToShow: 1,
+           slidesToScroll: 1
+         },
+       },
+     ],
+   });
+     });
+</script>

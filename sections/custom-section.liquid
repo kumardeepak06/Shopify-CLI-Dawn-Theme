@@ -1,0 +1,389 @@
+{% comment %}
+  <div>
+    <!-- name:-  The name attribute determines the section title that is shown in the theme editor. -->
+    <!--
+      tag:-By default, when Shopify renders a section, it’s wrapped in a <div> element with a unique id attribute:
+      If you don’t want to use a <div>, then you can specify which kind of HTML element to use with the tag attribute.
+      The following are the accepted values:
+      article
+      aside
+      div
+      footer
+      header
+      section
+    -->
+    <!--
+      class:-
+      When Shopify renders a section, it’s wrapped in an HTML element with a class of shopify-section.
+        You can add to that class with the class attribute:
+    -->
+    <!--
+      limit:
+      By default, there's no limit to how many times a section can be added to a template or section group.
+        You can specify a limit of 1 or 2 with the limit attribute:
+    -->
+  </div>
+{% endcomment %}
+
+<ul class="menu">
+  {% for link in section.settings.menu.links %}
+    <li class="menu-link">
+      <a href="{{ link.url }}">{{ link.title }}</a>
+
+      {% if link.links.size > 0 %}
+        <ul class="menu dropdown-child">
+          {% for child_link in link.links %}
+            <li class="menu-link">
+              <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+
+              {% if child_link.links.size > 0 %}
+                <ul class="menu dropdown-grandchild">
+                  {% for grandchild_link in child_link.links %}
+                    <li class="menu-link">
+                      <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
+<div class="container">
+  <div>{{ section.settings.inline }}</div>
+  <div class="section-title">{{ section.settings.title }}</div>
+  {% if section.settings.show_image %}
+    <div class="image">
+      {{ section.settings.select_image | img_url: '2048x' | img_tag }}
+    </div>
+  {% endif %}
+</div>
+
+<hr>
+<div>
+  {{ section.settings.html_file }}
+</div>
+
+{% for collection in section.settings.collection %}
+  <section>
+    {{ section.settings.collection }}
+  </section>
+{% endfor %}
+
+<section class="aricle">
+  {{ section.settings.article }}
+</section>
+{% for blogs in section.settings.blog %}
+  <section class="blg">
+    {{ section.settings.blog }}
+  </section>
+{% endfor %}
+
+{% schema %}
+{
+  "name": "My Custom Section",
+  "tag": "section",
+  "class": "myslideshow",
+  "limit": 2,
+  "max_blocks": 5,
+  "settings": [
+    {
+  "type": "link_list",
+  "id": "menu",
+  "label": "Menu"
+},
+{
+  "type": "page",
+  "id": "page",
+  "label": "Page"
+},
+    {
+  "type": "product",
+  "id": "product",
+  "label": "Product"
+},
+    {
+  "type": "product_list",
+  "id": "product_list",
+  "label": "Products",
+  "limit": 12
+},
+    {
+  "type": "html",
+  "id": "html_file",
+  "label": "HTML",
+      "placeholder": "Enter The HTML text"
+},
+    {
+  "type": "richtext",
+  "id": "paragraph",
+  "label": "Paragraph"
+},
+    {
+  "type": "url",
+  "id": "button_link",
+  "label": "Button link"
+},
+    {
+  "type": "video",
+  "id": "video",
+  "label": "A Shopify-hosted video"
+},
+    {
+  "type": "video_url",
+  "id": "product_description_video",
+  "label": "Product description video",
+  "accept": [
+    "youtube",
+    "vimeo"
+  ]
+},
+    {
+  "type": "checkbox",
+  "id": "enable_payment_button",
+  "label": "Show dynamic checkout button",
+  "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/online-store/dynamic-checkout)",
+  "default": true
+},
+     {
+  "type": "checkbox",
+  "id": "google",
+  "label": "Google Home",
+  "info": "MY favorite browser is. [Google](https://www.google.com)",
+  "default": true
+},
+    {
+  "type": "header",
+  "content": "Email Signup",
+  "info": "Subscribers added automatically to your “accepted marketing” customer list. [Learn more](https://help.shopify.com/manual/customers/manage-customers)"
+},
+    {
+  "type": "paragraph",
+  "content": "All of your collections are listed by default. To customize your list, choose 'Selected' and add collections."
+},
+    {
+  "type": "inline_richtext",
+  "id": "inline",
+  "default": "my <i>inline</i> <b>text</b>",
+  "label": "Inline rich text"
+},
+    {
+  "type": "font_picker",
+  "id": "heading_font",
+  "label": "Title Font",
+  "default": "helvetica_n4"
+},
+    {
+  "type": "collection",
+  "id": "collection",
+  "label": "Collection"
+},
+    {
+  "type": "collection_list",
+  "id": "collection_list",
+  "label": "Collections",
+  "limit": 8
+},
+  {
+  "type": "article",
+  "id": "article",
+  "label": "Article"
+},
+    {
+  "type": "blog",
+  "id": "blog",
+  "label": "Blog"
+},
+  {
+      "type": "text",
+      "id": "title",
+      "label": "Enter The Section Title Here"
+    },
+      {
+  "type": "radio",
+  "id": "title_aligment",
+  "label": "Title alignment",
+  "options": [
+    {
+      "value": "left",
+      "label": "Left"
+    },
+    {
+      "value": "right",
+      "label": "Right"
+    },
+    {
+      "value": "center",
+      "label": "Center"
+    }
+  ],
+  "default": "left"
+},
+    {
+  "type": "color",
+  "id": "title_text_color",
+  "label": "Text Color",
+  "default": "#000000"
+},
+      {
+  "type": "color",
+  "id": "title_bg_color",
+  "label": "Background Color",
+  "default": "#fff"
+},
+    {
+  "type": "color_background",
+  "id": "background",
+  "label": "Background",
+  "default": "linear-gradient(#ffffff, #000000)"
+},
+    {
+    "type": "color_scheme",
+    "id": "color_scheme",
+    "default": "scheme_1",
+    "label": "Color Scheme"
+},
+     {
+  "type": "range",
+  "id": "font_size",
+  "min": 12,
+  "max": 24,
+  "step": 1,
+  "unit": "px",
+  "label": "Font size",
+  "default": 16
+},
+    {
+  "type": "checkbox",
+  "id": "show_image",
+  "label": "Show Image",
+  "default": true
+},
+    {
+  "type": "number",
+  "id": "products_per_page",
+  "label": "Products per page",
+      "default": 1
+},
+     {
+           "type": "image_picker",
+           "id": "select_image",
+           "label": "Select Image"
+         },
+      {
+  "type": "radio",
+  "id": "image_with_text_alignment",
+  "label": "Image with text alignment",
+  "options": [
+    {
+      "value": "flex-start",
+      "label": "Left"
+    },
+    {
+      "value": "flex-end",
+      "label": "Right"
+    },
+    {
+      "value": "center",
+      "label": "Center"
+    }
+  ],
+  "default": "flex-start"
+},
+    {
+  "type": "select",
+  "id": "vertical_alignment",
+  "label": "Vertical alignment",
+  "options": [
+    {
+      "value": "top",
+      "label": "Top"
+    },
+    {
+      "value": "middle",
+      "label": "Middle"
+    },
+    {
+      "value": "bottom",
+      "label": "Bottom"
+    }
+  ],
+  "default": "middle"
+}
+  ],
+  "blocks": [
+     {
+       "name": "Image",
+       "type": "slide",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Select Image"
+         }
+       ]
+     }
+  ],
+  "presets": [
+    {
+      "name": "My Custom Section",
+      "settings": {
+        "title": "My Custom Section"
+      },
+      "blocks": [
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ],
+  	"locales": {
+    "en": {
+      "title": "Slideshow"
+    }
+    },
+  "enabled_on": {
+    "templates": ["*"],
+    "groups": ["footer"]
+  }
+}
+{% endschema %}
+
+<style>
+      .menu{
+        display: flex;
+      }
+          .container{
+            display: flex;
+            flex-direction: column;
+    /*         justify-content: center; */
+  /*           justify-content: {{section.settings.image_with_text_alignment}}; */
+            align-items: center;
+          }
+          .section-title{
+            margin-top: 2rem;
+            width: 400px;
+            height: 100px;
+            font-size: 24px;
+            font-family: {{section.settings.heading_font}};
+        /*     font-size: {{section.settings.font_size}}; */
+            color: {{section.settings.title_text_color}};
+      /*       background-color: {{section.settings.title_bg_color}}; */
+            background: {{section.settings.background}};
+            height: 40px;
+            text-align: {{section.settings.title_aligment}};
+
+          }
+          .image{
+            display:flex;
+            margin-top: 2rem;
+            height: 200px;
+            width: 250px;
+
+    /*         justify-content: {{section.settings.image_alignment}}; */
+          }
+</style>

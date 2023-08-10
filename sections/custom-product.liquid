@@ -1,0 +1,176 @@
+<h1 class="accordion">Click Here to view Custom Featured Products</h1>
+<div class="all-products panel">
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'product' %}
+        <div class="product" {{ block.shopify_attributes }}>
+          <div class="card">
+            <a href="{{ block.settings.product.url }}">
+              <img
+                src="{{ block.settings.product.featured_image | img_url: 'master' }}"
+                alt="Product"
+                height=""
+                width=""
+                style="width:100%"
+                loading="lazy"
+              >
+              <h2>{{ block.settings.product.title | truncate: 33 | escape }}</h2>
+            </a>
+            <p class="price">{{ block.settings.product.price | money }}</p>
+            <p>{{ block.settings.product.description | truncate: 150 }}</p>
+            <!-- Form for add to cart button -->
+            <form action="" method="post" id="product-form- {{ product.id }}">
+              <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+              <div>
+                <button class="addtocart" type="submit" name="add">Buy Now</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    {% endcase %}
+  {% endfor %}
+</div>
+
+<style>
+  /* Style the buttons that are used to open and close the accordion panel */
+  .accordion {
+    margin: 10px 0px;
+    background-color: #d7d7d7;
+    color: #2a2a2a;
+    cursor: pointer;
+    padding: 24px;
+    width: 25%;
+    margin-left: 18px;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+    border-radius: 20px;
+  }
+  .newClass{
+    display: grid !important;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+  }
+    .active, .accordion:hover{
+    background-color: #f3d1d1cf;
+    }
+      .panel{
+    padding: 0 18px;
+    background-color: white;
+    overflow: hidden;
+    display: none;
+    transition: max-height 0.2s ease-out;
+      }
+
+    .panel .product{
+      padding-right: 16px;
+      padding-bottom: 16px;
+    }
+      .card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          max-width: 360px;
+          margin: auto;
+          text-align: center;
+          font-family: arial;
+        }
+      .card a{
+        text-decoration: none;
+      }
+
+      .price {
+          color: grey;
+          font-size: 22px;
+      }
+
+    .card .buttons{
+      display: grid;
+      grid-template-columns: auto auto;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 10px;
+    }
+
+    .card .shop-now {
+      border: none;
+      outline: 0;
+      padding: 10px;
+      color: white;
+      background-color: #33FF92;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 14px;
+      border-radius: 25px;
+    }
+    .card .addtocart {
+        border: none;
+        outline: 0;
+        padding: 10px;
+        color: white;
+        background-color: #FF6C33;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 14px;
+        border-radius: 25px;
+            }
+    .card button:hover {
+        opacity: 0.6;
+    }
+</style>
+
+{% schema %}
+{
+  "name": "Custom Product Section",
+  "tag": "section",
+  "class": "product",
+  "max_blocks": 12,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Products"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "product",
+       "type": "product",
+       "settings": [
+         {
+           "type": "product",
+           "id": "product",
+           "label": "Product"
+         }
+       ]
+     }
+   ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  document.querySelector(".accordion").addEventListener("click",function(){
+    document.querySelector(".panel").classList.toggle('newClass')
+  });
+    let acc = document.getElementsByClassName("accordion");
+    let i;
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      let panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+</script>

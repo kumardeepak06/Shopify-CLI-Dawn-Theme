@@ -1,0 +1,321 @@
+<div class="header">
+  <div class="header-logo">
+    <a href="#">
+      <img
+        src="{{ section.settings.logo_image | image_url:'master'}}"
+        alt="logo image"
+      >
+    </a>
+  </div>
+
+  <ul class="menu">
+    {% for link in section.settings.menu.links %}
+      <li class="menu-link">
+        <a href="{{ link.url }}">{{ link.title }}</a>
+        {% if link.links.size > 0 %}
+          <ul class="menu dropdown-child menu-dropdown-child">
+            {% for child_link in link.links %}
+              <li class="menu-link">
+                <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+                {% if child_link.links.size > 0 %}
+                  <ul class="menu dropdown-grandchild menu-dropdown-grandchild column1">
+                    {% for grandchild_link in child_link.links %}
+                      <li class="menu-link">
+                        <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  <!--
+    <ul class="menu">
+      <li class="menu-link">
+        <a href="#">Acne Care Quiz</a>
+      </li>
+      <li class="menu-link dropdown-menu">
+        <a href="#">Shop Now</a>
+        <ul class="menu-dropdown">
+          <li class="menu-dropdown-child ">
+            <h3>Shop by Category</h3>
+            <ul class="menu-dropdown-grandchild column1">
+              <li><a href="#">Moisturizer</a></li>
+              <li><a href="#">Cleanser</a></li>
+              <li><a href="#">Toner</a></li>
+              <li><a href="#">Serum</a></li>
+              <li><a href="#">Oil</a></li>
+              <li><a href="#">Weekly Booster</a></li>
+            </ul>
+          </li>
+          <li class="menu-dropdown-child">
+            <h3>Shop by Stage On Acne Care</h3>
+            <ul class="menu-dropdown-grandchild column2 stages">
+              <li>
+                <a class="stage" id="stage-1" href="#"
+                  >STAGE 1 <br>
+                  Acne Prone</a
+                >
+              </li>
+              <li>
+                <a class="stage" id="stage-2" href="#"
+                  >STAGE 2 <br>
+                  Clogged Pores</a
+                >
+              </li>
+              <li>
+                <a class="stage" id="stage-3" href="#"
+                  >STAGE 3 <br>
+                  Breakout</a
+                >
+              </li>
+              <li>
+                <a class="stage" id="stage-4" href="#"
+                  >STAGE 4 <br>
+                  Post-Breakout</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-link">
+        <a href="#">Origin Story</a>
+      </li>
+      <li class="menu-link">
+        <a href="#">Acne Knowledge</a>
+      </li>
+    </ul>
+  -->
+
+  <div class="header-desktop-bar-right">
+    <div class="header-buttons">
+      <div class="search-bar">
+        <form action="#">
+          <input type="text" id="search-box" placeholder="Search Here">
+        </form>
+      </div>
+      <div class="header-button">
+        <a href="#" class="navlink" title="My Account">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0786/9710/3635/files/icons8-account-32.png?v=1689937292"
+            alt=""
+            width="25px"
+            height="25px"
+          >
+        </a>
+      </div>
+      <div class="header-button">
+        <a href="" class="navlink" title="Shopping Cart">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0786/9710/3635/files/icons8-bag-50.png?v=1689937292"
+            alt="My cart"
+            width="20px"
+            height="20px"
+          >
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Custom Header Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Logo Image"
+    },
+    {
+      "type": "select",
+      "id": "header_position",
+      "label": "Header Position",
+      "options": [
+        {
+          "value": "on-scroll-up",
+          "label": "Sticky"
+        },
+        {
+          "value": "always",
+          "label": "Fixed"
+        }
+      ],
+      "default": "on-scroll-up"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Header Section"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  :root {
+    --font-weight: 200;
+    --color1: #707070;
+    --fontsize: 15px;
+    --font-size-base: 14px;
+    --fontfamily: 'Europa_Regular';
+    --stages-height: 70px;
+  }
+
+  .header {
+    width: 100% !important;
+    height: 55px;
+    background-color: #fff;
+    display: flex;
+    position: fixed !important;
+    top: 2px;
+  }
+  .header .header-logo img {
+    height: 28px;
+    position: relative;
+    left: 80px;
+    top: 14px !important;
+  }
+  ul {
+    list-style: none;
+  }
+
+  .menu {
+    display: flex;
+    margin-left: 2px;
+    justify-content: space-evenly;
+  }
+  li a {
+    color: var(--color1);
+    font-size: var(--font-size-base);
+    text-decoration: none;
+  }
+
+  li a:hover {
+    color: rgb(51, 176, 243);
+  }
+
+  .dropdown-menu {
+    overflow: hidden;
+  }
+
+  .menu-dropdown {
+    display: none;
+    position: absolute;
+    width: 60%;
+    min-height: max-content;
+    left: 28%;
+    margin-top: 2px;
+    box-shadow: 0px 8px 16px 0px rgba(121, 121, 121, 0.2);
+    border-radius: 2px;
+    background-color: #fff;
+    z-index: 1;
+  }
+
+  .dropdown-menu:hover .menu-dropdown {
+    display: block;
+  }
+
+  .menu-dropdown-child h3 {
+    color: var(--color1);
+    font-size: var(--fontsize);
+    font-weight: normal;
+    display: block;
+  }
+
+  .column1 {
+    float: left;
+    width: 50%;
+    padding: 5px;
+    background-color: #fff;
+    /* height: 250px;    */
+  }
+
+  .column2 {
+    float: right;
+    width: 50%;
+    padding: 5px;
+    background-color: #fff;
+    /* height: 250px; */
+  }
+
+  .column1 a {
+    float: none;
+    color: var(--color1);
+    font-size: var(--font-size-base);
+    padding: 2px;
+    text-decoration: none;
+    display: block;
+    /* text-align: left; */
+  }
+
+  .stages {
+    display: grid;
+    grid-template-columns: auto auto;
+    flex: 3 1 0%;
+    grid-row-gap: 1em;
+  }
+
+  .column2 a {
+    float: none;
+    color: var(--color1);
+    font-size: var(--font-size-base);
+    padding: 2px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .stages .stage {
+    height: var(--stages-height);
+    width: 150px;
+    min-height: max-content;
+    margin: 5px 5px 5px 0;
+    color: var(--color1);
+    position: relative;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight);
+    font-family: var(--fontfamily);
+    text-align: start;
+    padding: 8px;
+  }
+
+  .stages #stage-1 {
+    background-color: #6acbdf;
+  }
+
+  .stages #stage-2 {
+    background-color: #ff767d;
+  }
+
+  .stages #stage-3 {
+    background-color: #26dea6;
+  }
+
+  .stages #stage-4 {
+    background-color: #ffb25b;
+  }
+
+  .header-desktop-bar-right {
+    margin-top: 14px;
+  }
+
+  .header-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+    margin-right: 40px;
+  }
+</style>

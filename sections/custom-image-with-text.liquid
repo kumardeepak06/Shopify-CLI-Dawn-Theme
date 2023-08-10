@@ -1,0 +1,91 @@
+<div class="main-container">
+  <div class="container">
+    <div class="image">
+      <img
+        src="{{ section.settings.image | img_url:'480x' }}"
+        loading="lazy"
+        alt="Loading Image"
+      >
+    </div>
+    {% if section.settings.enabletext %}
+      <div class="text">
+        <h4>{{ section.settings.text }}</h4>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Text Alignment",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Select Image"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Add Text"
+    },
+    {
+      "type": "checkbox",
+      "id": "enabletext",
+      "label": "Enable Text",
+      "default": true
+    },
+    {
+      "type":"select",
+      "id":"text_alignment",
+      "label":"Text Alignment",
+      "options":[
+        {
+          "value":"left",
+          "label":"Left"
+        },
+        {
+          "value":"center",
+          "label":"Center"
+        },
+        {
+          "value":"right",
+          "label":"Right"
+        }
+      ],
+      "default":"center"
+    }
+  ],
+  "presets": [
+    {
+     "name": "Custom Text Alignment"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .main-container {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+      position: relative;
+  }
+
+  .text {
+      position: absolute;
+      min-width: 100%;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+  }
+
+  .text h4 {
+    text-align: {{ section.settings.text_alignment }};
+    color: #fff;
+    font-size: xx-large;
+  }
+</style>
